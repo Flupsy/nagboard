@@ -1,0 +1,100 @@
+<html>
+
+<!-- $Id: nagboard.html 2 2011-12-08 16:16:18Z flup $ -->
+
+  <head>
+
+  <title> Status </title>
+
+  <script src="/js/jquery/jquery.js"></script>
+
+  <script>
+
+    jQuery(document).ready(function() {
+
+      setInterval("getstatus()", 2000); // run update every 2 seconds
+
+    });
+
+    function getstatus () {
+
+      jQuery("#updateMe").load("/nagboard/nagboard.pl");
+    }
+
+  </script>
+
+<style>
+	body {
+		background: #000;
+		color: #07f;
+		font-family: sans-serif;
+		font-size: 12mm;
+	}
+
+	.newdown {
+		font-size: 12mm;
+		text-decoration: blink;
+		color: #f00;
+	}
+
+	.down {
+		font-size: 12mm;
+		color: #f00;
+	}
+
+	.newdownoutput {
+		font-size: 6mm;
+		text-decoration: blink;
+		color: #f00;
+	}
+
+	.downoutput {
+		font-size: 6mm;
+		color: #f00;
+	}
+
+	.newoutput {
+		font-size: 6mm;
+		text-decoration: blink;
+		color: #fff;
+	}
+
+	.output {
+		font-size: 6mm;
+		color: #fff;
+	}
+
+	.newnotdown {
+		font-size: 12mm;
+		text-decoration: blink;
+		color: #fff;
+	}
+
+	.notdown {
+		font-size: 12mm;
+		color: #fff;
+	}
+
+	.graphtext {
+		font-size: 18pt;
+		color: #fff;
+	}
+
+	#statusline {
+		font-size: 12mm;
+		position: absolute;
+		line-height: 40px;
+		bottom: 20px;
+		color: #ff0;
+	}
+</style>
+
+  </head>
+
+  <body>
+
+  <div id="updateMe"></div>
+
+  </body>
+
+</html>
