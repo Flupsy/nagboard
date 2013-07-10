@@ -44,5 +44,5 @@ Other stuff
 
 I'm a sysadmin, not a programmer, and the code might be very unpleasant.  There
 are lots of features that would be nice to have.  Feel free to request them or to
-send me patches, but please be nice.  Bitching about my code is pointless.
+send me pull requests, but please be nice.  Bitching about my code is pointless.
 
